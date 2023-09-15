@@ -6,6 +6,7 @@ public class Item {
     private final String nome;
     private final double preco;
     private int quantidade;
+    private double valorTotal;
 
 
     // construtor :::
@@ -27,10 +28,19 @@ public class Item {
         return this.quantidade;
     }
 
+    // setters :::
+    public void setQuantidade(int quantidade) {
+        this.quantidade += quantidade;
+    }
 
     // métodos :::
     protected void removeQuantidade(int quantidade) {
         this.quantidade -= quantidade;
+    }
+
+    public double getValorTotal() {
+        this.valorTotal = quantidade * preco;
+        return this.valorTotal;
     }
 
     @Override
